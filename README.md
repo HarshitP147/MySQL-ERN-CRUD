@@ -8,7 +8,7 @@ To get started, clone this repository in your computer.
 
 For client side,
 ```powershell 
-cd client/
+cd client
 npm install
 ```
 
