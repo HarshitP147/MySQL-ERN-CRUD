@@ -6,10 +6,11 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "client": "cd../client && npm start",
+        "cdev": "cd../client && npm start",
+        "client": "cd../client && serve -s build",
         "server": "nodemon server.js",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "start": "nodemon server.js"
+        "start": "npm run dev"
     },
     "author": "Harshit Pandit",
     "license": "ISC",
