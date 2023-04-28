@@ -9,7 +9,7 @@
         "cdev": "cd../client && npm start",
         "client": "cd../client && serve -s build",
         "server": "nodemon server.js",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "dev": "concurrently \"npm run server\" \"npm run cdev\"",
         "start": "npm run dev"
     },
     "author": "Harshit Pandit",

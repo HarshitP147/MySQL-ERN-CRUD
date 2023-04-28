@@ -25,7 +25,7 @@ const App = () => {
                 .then((res) => res.json())
                 .then((data) => setDataList(data["sqlData"]));
         }
-    }, [userSearch, dataList]);
+    }, [userSearch]);
 
     const deleteUser = (e) => {
         const userRow = e.target.parentElement.parentElement;
@@ -35,6 +35,10 @@ const App = () => {
         }).then((res) => {
             if (res.status !== 204) {
                 alert("Server could not delete data");
+            } else {
+                fetch("/api")
+                    .then((res) => res.json())
+                    .then((data) => setDataList(data["sqlData"]));
             }
         });
     };
